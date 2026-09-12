@@ -57,14 +57,7 @@ namespace muhyidddinprojek1
             txtUsername.Text = "";
             txtdesk.Text = "";
         }
-        private void btnSimpan_Click(object sender, EventArgs e)
-        {
-            string nr = txtUsername.Text;
-            string de = txtdesk.Text;
-            DB.crud($"INSERT INTO role VALUES(null,'{nr}','{de}')");
-            bersih();
-            tampildata();
-        }
+  
 
 
 
@@ -92,10 +85,7 @@ namespace muhyidddinprojek1
             }
         }
 
-        private void txtShow_Click(object sender, EventArgs e)
-        {
-            tampildata();
-        }
+       
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -104,17 +94,7 @@ namespace muhyidddinprojek1
 
         private void txtCari_TextChanged(object sender, EventArgs e)
         {
-            dgvRole.Rows.Clear();
-            DB.crud($"SELECT * FROM role WHERE nama_role LIKE '%{txtCari.Text}%'");
-            foreach (DataRow baris in DB.ds.Tables[0].Rows)
-            {
-                string id = "" + baris["id_role"];
-                string nr = "" + baris["nama_role"];
-                string de = "" + baris["Deskripsi"];
-                dgvRole.Rows.Add(id, nr, de);
-
-
-            }
+          
         }
 
         private void FormRole_Load(object sender, EventArgs e)
@@ -133,15 +113,56 @@ namespace muhyidddinprojek1
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-
+            string nr = txtUsername.Text;
+            string de = txtdesk.Text;
+            DB.crud($"INSERT INTO role VALUES(null,'{nr}','{de}')");
+            bersih();
+            tampildata();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Memanggil kembali Form2 (Induk)
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
+
+            // Menutup form saat ini
             this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtShow_Click_1(object sender, EventArgs e)
+        {
+            tampildata();
+        }
+
+        private void txtCari_TextChanged_1(object sender, EventArgs e)
+        {
+            dgvRole.Rows.Clear();
+            DB.crud($"SELECT * FROM role WHERE nama_role LIKE '%{txtCari.Text}%'");
+            foreach (DataRow baris in DB.ds.Tables[0].Rows)
+            {
+                string id = "" + baris["id_role"];
+                string nr = "" + baris["nama_role"];
+                string de = "" + baris["Deskripsi"];
+                dgvRole.Rows.Add(id, nr, de);
+
+
+            }
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
 
         }

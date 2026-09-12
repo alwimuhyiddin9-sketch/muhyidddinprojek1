@@ -118,10 +118,13 @@ namespace muhyidddinprojek1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 utama = new Form2();
-            utama.Show();
+            // Memanggil kembali Form2 (Induk)
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
 
-            // Tutup form master yang sedang aktif
+            // Menutup form saat ini
             this.Close();
         }
 

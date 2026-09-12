@@ -31,15 +31,21 @@ namespace muhyidddinprojek1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Tampilkanform(new FormRole());
-          
+            FormRole formRole = new FormRole();
+            formRole.Owner = this; // Menjadikan Form2 saat ini sebagai "Induk"
+            formRole.Show();
+            this.Hide();
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Tampilkanform(new FormUser());
-        
+            FormUser formUser = new FormUser();
+            formUser.Owner = this; // Menjadikan Form2 saat ini sebagai "Induk"
+            formUser.Show();
+            this.Hide();
+
 
         }
 
@@ -51,6 +57,15 @@ namespace muhyidddinprojek1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnabsensi_Click(object sender, EventArgs e)
+        {
+                FormAbsensi formAbsen = new FormAbsensi();
+                formAbsen.Owner = this; // KUNCI: Menjadikan Form2 saat ini sebagai "Induk"
+                formAbsen.Show();
+                this.Hide();
+            
         }
     }
 }

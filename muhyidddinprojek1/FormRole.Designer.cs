@@ -36,6 +36,7 @@ namespace muhyidddinprojek1
             this.Column3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace muhyidddinprojek1
             this.txtCari = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,18 @@ namespace muhyidddinprojek1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 461);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Kembali ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -184,6 +196,7 @@ namespace muhyidddinprojek1
             this.txtShow.TabIndex = 19;
             this.txtShow.Text = "Show";
             this.txtShow.UseVisualStyleBackColor = true;
+            this.txtShow.Click += new System.EventHandler(this.txtShow_Click_1);
             // 
             // btnEdit
             // 
@@ -195,6 +208,7 @@ namespace muhyidddinprojek1
             this.btnEdit.TabIndex = 18;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // btnSimpan
             // 
@@ -214,6 +228,7 @@ namespace muhyidddinprojek1
             this.txtCari.Name = "txtCari";
             this.txtCari.Size = new System.Drawing.Size(763, 26);
             this.txtCari.TabIndex = 16;
+            this.txtCari.TextChanged += new System.EventHandler(this.txtCari_TextChanged_1);
             // 
             // txtUsername
             // 
@@ -233,17 +248,6 @@ namespace muhyidddinprojek1
             this.label1.Size = new System.Drawing.Size(352, 34);
             this.label1.TabIndex = 14;
             this.label1.Text = "DATA MASTER ROLE";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Kembali ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormRole
             // 
